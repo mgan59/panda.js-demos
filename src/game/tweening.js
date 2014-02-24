@@ -17,7 +17,7 @@ for(var i in game.Tween.Easing) {
     if(i !== 'Linear') easings.push(i);
 }
 
-SceneTitle = game.Scene.extend({
+SceneGame = game.Scene.extend({
     init: function() {
         var text;
         var sprite;
@@ -63,7 +63,7 @@ SceneTitle = game.Scene.extend({
     click: function() {
         currentEasing++;
         if(!easings[currentEasing]) currentEasing = 0;
-        game.system.setScene(SceneTitle);
+        game.system.setScene(SceneGame);
     }
 })
 
