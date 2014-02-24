@@ -34,7 +34,7 @@ Panda = game.Sprite.extend({
     }
 });
 
-SceneTitle = game.Scene.extend({
+SceneGame = game.Scene.extend({
     current: null,
 
     init: function() {

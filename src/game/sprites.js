@@ -11,7 +11,7 @@ game.module(
 game.icon = 'media/icons/image.png';
 game.addAsset(game.icon);
 
-SceneTitle = game.Scene.extend({
+SceneGame = game.Scene.extend({
     init: function() {
         var sprite, text;
 

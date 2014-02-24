@@ -52,7 +52,7 @@ Player = game.Class.extend({
     }
 });
 
-SceneTitle = game.Scene.extend({
+SceneGame = game.Scene.extend({
     init: function() {
         this.player = new Player(game.system.width / 2, 800);
 
