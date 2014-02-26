@@ -44,7 +44,7 @@ Player = game.Class.extend({
         
         this.changeAnim('jump');
 
-        var speed = 0.5;
+        var speed = 500;
         var up = game.scene.addTween(this.sprite.position, {y: 500}, speed, {easing: game.Tween.Easing.Quadratic.Out, onComplete: this.changeAnim.bind(this,'fall')});
         var down = game.scene.addTween(this.sprite.position, {y: 800}, speed, {easing: game.Tween.Easing.Quadratic.In, onComplete: this.changeAnim.bind(this,'walk',true)});
         up.chain(down);
@@ -56,9 +56,9 @@ SceneGame = game.Scene.extend({
     init: function() {
         this.player = new Player(game.system.width / 2, 800);
 
-        var word = game.ua.mobile ? 'Touch' : 'Click';
+        var word = game.device.mobile ? 'Touch' : 'Click';
         text = new game.BitmapText(word + ' to jump', {font:'HelveticaNeue'});
-        text.position.x = game.system.width / 2 - text.width / 2;
+        text.position.x = game.system.width / 2 - text.textWidth / 2;
         text.position.y = game.system.height - 50;
         this.stage.addChild(text);
 

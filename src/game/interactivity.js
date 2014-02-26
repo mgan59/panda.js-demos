@@ -54,7 +54,7 @@ SceneGame = game.Scene.extend({
 
         var word = game.ua.mobile ? 'Touch' : 'Click';
         text = new game.BitmapText(word + ' and drag sprites', {font:'HelveticaNeue'});
-        text.position.x = game.system.width / 2 - text.width / 2;
+        text.position.x = game.system.width / 2 - text.textWidth / 2;
         text.position.y = game.system.height - 50;
         this.stage.addChild(text);
 
@@ -67,7 +67,7 @@ SceneGame = game.Scene.extend({
             this.current.position.y = e.global.y + this.current.offset.y;
         }
     }
-})
+});
 
 game.start();
 

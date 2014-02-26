@@ -16,7 +16,7 @@ game.Scene.inject({
     init: function() {
         var word = game.ua.mobile ? 'Touch' : 'Click';
         text = new game.BitmapText(word + ' to change', {font:'HelveticaNeue'});
-        text.position.x = game.system.width / 2 - text.width / 2;
+        text.position.x = game.system.width / 2 - text.textWidth / 2;
         text.position.y = game.system.height - 50;
         this.stage.addChild(text);
 
@@ -56,7 +56,7 @@ game.Scenes = [
             this.emitter.endScale = 0.5;
             this.emit();
 
-            this.addTimer(1, this.emit.bind(this), true);
+            this.addTimer(1000, this.emit.bind(this), true);
         },
 
         emit: function() {
@@ -66,7 +66,7 @@ game.Scenes = [
                 this.emitter.angle = Math.PI * 2 / count * i;
                 this.emitter.accelAngle = this.emitter.angle - Math.PI;
                 this.emitter.emit();
-            };
+            }
         }
     }),
 
@@ -135,7 +135,7 @@ game.nextScene = function() {
     game.currentScene++;
     if(!game.Scenes[game.currentScene]) game.currentScene = 0;
     game.system.setScene(game.Scenes[game.currentScene]);
-}
+};
 
 game.start(game.Scenes[game.currentScene]);
 
