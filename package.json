@@ -1,12 +1,12 @@
 {
-  "name": "simple_canvas_pixi_game",
+  "name": "pandajs-demos"
   "version": "0.1.0",
-  "description": "a simple canvas game using pixi",
+  "description": "pandajs-demos requires express-static-server"
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Morgan Craft (http://morgancraft.com/)",
+  "author": "Eemeli Kelokorpi"
   "license": "MIT",
   "dependencies": {
     "express": "~3.4.8"
