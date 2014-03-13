@@ -30,7 +30,7 @@ game.Scene.inject({
         this.emitter.textures.push('media/particle.png');
         this.addEmitter(this.emitter);
 
-        this.super();
+        this._super();
     },
 
     click: function() {
@@ -41,14 +41,14 @@ game.Scene.inject({
 game.Scenes = [
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.speedVar = 50;
         }
     }),
 
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.speed = 200;
             this.emitter.rate = 0;
             this.emitter.angleVar = 0;
@@ -72,7 +72,7 @@ game.Scenes = [
 
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.rate = 0;
             this.emitter.life = 0;
             this.emitter.endAlpha = 1;
@@ -92,7 +92,7 @@ game.Scenes = [
 
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.speed = 200;
             this.emitter.velRotate = 2;
         }
@@ -100,7 +100,7 @@ game.Scenes = [
 
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.speed = 400;
             this.emitter.life = 3;
             this.emitter.startScale = 0;
@@ -111,7 +111,7 @@ game.Scenes = [
 
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.life = 3;
             this.emitter.speed = 300;
             this.emitter.angle = -Math.PI/2;
@@ -122,7 +122,7 @@ game.Scenes = [
 
     game.Scene.extend({
         init: function() {
-            this.super();
+            this._super();
             this.emitter.angleVar = 0;
             this.emitter.positionVar.set(game.system.width / 2, game.system.height / 2);
         }

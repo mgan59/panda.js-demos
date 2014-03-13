@@ -57,7 +57,7 @@ SceneGame = game.Scene.extend({
         text.position.y = 150;
         this.stage.addChild(text);
 
-        this.super();
+        this._super();
     },
 
     click: function() {

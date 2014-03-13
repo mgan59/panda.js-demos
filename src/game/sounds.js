@@ -13,8 +13,7 @@ game.addAsset(game.icon);
 
 SceneGame = game.Scene.extend({
     init: function() {
-
-        this.super();
+        this._super();
     }
 })
 
